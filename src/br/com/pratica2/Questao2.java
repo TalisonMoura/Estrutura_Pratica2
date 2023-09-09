@@ -20,7 +20,7 @@ public class Questao2 {
         String pathNoivo = "ListaNoivo.txt";
         LinkedList<String> NoivaList = new LinkedList<String>();
         LinkedList<String> NoivoList = new LinkedList<String>();
-        LinkedList<String> Convites = new LinkedList<String>();
+        LinkedList<String> Convidados = new LinkedList<String>();
         try {
             FileReader frNoivo = new FileReader(pathNoivo);
             FileReader frNoiva = new FileReader(pathNoiva);
@@ -34,16 +34,16 @@ public class Questao2 {
                 NoivaList.add(convNoiva);
             }
 
-            Convites.addAll(NoivoList);
-            Convites.addAll(NoivaList);
-            Collections.sort(Convites);
+            Convidados.addAll(NoivoList);
+            Convidados.addAll(NoivaList);
+            Collections.sort(Convidados);
 
-            for (String convidados : Convites) {
-                System.out.println(convidados);
+            for (String nome : Convidados) {
+                System.out.println(nome);
             }
 
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
     }
 }
