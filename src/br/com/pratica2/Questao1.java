@@ -9,16 +9,16 @@ import java.util.LinkedList;
  */
 public class Questao1 {
     public void LinkedList(){
-        LinkedList<Integer> prioridade = new LinkedList<Integer>();
-        LinkedList<Integer> list = new LinkedList<Integer>();
+        LinkedList<Integer> prioridadeList = new LinkedList<Integer>();
+        LinkedList<Integer> comumList = new LinkedList<Integer>();
         for(int i = 1; i <= 200; i++) {
-            list.add(i);
+            comumList.add(i);
             if (i % 2 != 0 && i <= 100) {
-                prioridade.add(i);
-                list.remove(prioridade.indexOf(i));
+                prioridadeList.add(i);
+                comumList.remove(prioridadeList.indexOf(i));
             }
         }
-        System.out.println("Lista de Prioridade: " + prioridade);
-        System.out.println("Lista Comum: " + list);
+        System.out.println("Lista de Prioridade: " + prioridadeList);
+        System.out.println("Lista Comum: " + comumList);
     }
 }
